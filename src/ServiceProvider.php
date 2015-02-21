@@ -19,7 +19,7 @@ class ServiceProvider extends BaseServiceProvider {
 	public function boot()
 	{
 		$settings   = $this->app['files']->getRequire(__DIR__ .'/../config/settings.php');
-		$config     = array_merge($settings, $views);
+	
         $this->app['config']->set('fpp/menu::config', $config);
 
 		// Extending Blade engine
